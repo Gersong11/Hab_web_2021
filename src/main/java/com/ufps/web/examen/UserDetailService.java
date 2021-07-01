@@ -16,8 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ufps.web.examen.entities.Usuario;
 import com.ufps.web.examen.repository.IUsuarioDao;
 
-
-@Service("userDetailService")
+@Service
 public class UserDetailService implements UserDetailsService {
 	
 	@Autowired
@@ -28,6 +27,7 @@ public class UserDetailService implements UserDetailsService {
 	@Transactional(readOnly=true)
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
+		System.out.println("ENTRO ACA");
 		
 //		se utiliza el parametro llamado username, ya que Spring maneja automatico este nombre
 		Usuario usuario = usuarioDao.findByEmail(username);

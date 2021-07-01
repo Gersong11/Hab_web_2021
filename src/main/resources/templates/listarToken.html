@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<title>Menu Principal</title>
+</head>
+<body>
+
+<div class="container" align="center">
+		
+		<div class="card">
+			<div class="card-header"><h1>Listar  Tokens</h1> </div>
+			<div class="card-body">
+				<table class="table table-bordered">
+					<thead>
+					  <tr>
+						<th>id</th>
+						<th>Host</th>
+						<th>userdb</th>
+						<th>pass</th>
+						<th>db</th>
+						<th>token</th>
+						<th>port</th>
+						<th>user</th>
+						<th>state</th>
+						<th>type</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr th:each="t: ${token}">
+						<td th:text="${t.id}"></td>
+						<td th:text="${t.host}"></td>
+						<td th:text="${t.userdb}"></td>
+						<td th:text="${t.pass}"></td>
+						<td th:text="${t.db}"></td>
+						<td th:text="${t.token}"></td>
+						<td th:text="${t.port}"></td>
+						<td th:text="${t.usuario.email}"></td>
+						<td th:text="${t.state}"></td>
+						<td>xd</td>
+					  </tr>
+					</tbody>
+				  </table>
+			
+				<br>
+				<br>
+
+			</div>
+			<div class="card-footer">copyright 1151270 <br></div>
+		  </div>
+	
+
+</div>
+
+</body>
+</html>

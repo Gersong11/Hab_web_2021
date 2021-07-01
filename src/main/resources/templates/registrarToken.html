@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<title>Menu Principal</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<!-- Brand/logo -->
+		<a class="navbar-brand" href="#">Inicio</a>
+		
+		<!-- Links -->
+		<ul class="navbar-nav">
+		  <li class="nav-item">
+			<a class="nav-link" th:href="@{/inicio}">Menu</a>
+		  </li>
+		</ul>
+	  </nav>
+
+
+<div class="container" align="center">
+		
+		<div class="card">
+			<div class="card-header"><h1>Registro Token</h1> </div>
+			<div class="card-body">
+
+				<form th:action="@{/token}" method="post">
+					<div class="form-group">
+						<div class="form-group">
+							<label for="user">Host:</label>
+							<input type="text" class="form-control"  name="host" style="width: 50%;">
+						  </div>
+						  <div class="form-group">
+							<label for="user">Usuario base de satos:</label>
+							<input type="text" class="form-control" name="userdb" style="width: 50%;">
+						  </div>
+						  <div class="form-group">
+							<label for="user">contraseniaa de usuario:</label>
+							<input type="text" class="form-control" name="pass" style="width: 50%;">
+						  </div>
+						  <div class="form-group">
+							<label for="user">nombre de la db:</label>
+							<input type="text" class="form-control"  name="db" style="width: 50%;">
+						  </div>
+						  <div class="form-group">
+							<label for="user">token:</label>
+							<input type="text" class="form-control"  name="token" style="width: 50%;">
+						  </div>
+						  <div class="form-group">
+							<label for="user">puerto:</label>
+							<input type="text" class="form-control"  name="port" style="width: 50%;">
+						  </div>
+						  <div class="form-group">
+							<label for="user">estado:</label>
+							<input type="text" class="form-control"  name="state" style="width: 50%;">
+						  </div>
+						  <div class="form-group">
+							<label for="sel1">type:</label>
+							<select class="form-control" name="type" id="sel1"  style="width: 50%;">
+							  <option th:value="mysql">mysql</option>
+							  <option th:value="postgresql">postgresql</option>
+							  <option th:value="oracle">oracle</option>
+							
+							</select>
+						  </div>
+				<br>
+				<br>
+					<button type="submit" class="btn btn-success">Crear</button>
+				  </form>
+			
+				<br>
+				<br>
+
+			</div>
+			<div class="card-footer">copyright 1151270 <br></div>
+		  </div>
+	
+
+</div>
+
+</body>
+</html>

@@ -24,9 +24,9 @@ public class Connectiontoken implements Serializable {
 
 	private String pass;
 
-	private short port;
+	private int port;
 
-	private short state;
+	private String state;
 
 	private String token;
 
@@ -93,19 +93,19 @@ public class Connectiontoken implements Serializable {
 		this.pass = pass;
 	}
 
-	public short getPort() {
+	public int getPort() {
 		return this.port;
 	}
 
-	public void setPort(short port) {
+	public void setPort(int port) {
 		this.port = port;
 	}
 
-	public short getState() {
+	public String getState() {
 		return this.state;
 	}
 
-	public void setState(short state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 
